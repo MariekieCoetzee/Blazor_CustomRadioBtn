@@ -1,6 +1,6 @@
 ## Customised Radio Buttons in Blazor Wasm .Net 5
 
-I recently worked on a Blazor project with an exciting requirement, create a custom image for every radio button.  Finding documentation, help or tips was but of a struggle, so I  decided to share my findings with the world!  
+I recently worked on a Blazor project with an exciting requirement: **Create a custom image for every radio button**.  Finding documentation, help or tips was but of a struggle, so I  decided to share my findings with the world!  
 
 ## Requirement and result
 
@@ -8,7 +8,7 @@ Lets start at the end.  This gif shows customised animated radio buttons that ar
 
 The end result pure **c#** + pure **razor**+ pure **css** = pure ***awesomeness***.
 
-![demo](BlazorCustomRadioBtn.assets/demo.gif)
+![demo](https://user-images.githubusercontent.com/20985071/138357461-eca7d8e7-af1b-455f-9357-a273b36a3956.gif)
 
 ## Implementation
 
@@ -87,13 +87,14 @@ The `InputRadioGroup` component is required to group the individual `InputRadio`
 
 #### Explanation
 
-`InputRadioGroup` is required when using `InputRadio`, it groups the radio buttons together.  Adding the `@bind-Value` attribute (it is case sensitive) to the `_emoji.EmojiOptions` property wires it up to the property in the Model.  Looping through each `Enum.GetValues` in `EmojiEnum` will return all the key values in the enum.  
+`InputRadioGroup` is required when using
+ `InputRadio`, it groups the radio buttons together.  Adding the `@bind-Value` attribute (it is case sensitive) to the `_emoji.EmojiOptions` property wires it up to the property in the Model.  Looping through each `Enum.GetValues` in `EmojiEnum` will return all the key values in the enum.  
 
 `InputRadio` has a `Value` attribute which are binding to the enums iterated value.  Using the above extension method it can be called `@value.GetDisplayName()` in the `<span>` element and just like that the display attribute value is shown! So cool right!?  Just a little bit of space to the left is added using the build in `ml-2 mr-2` class.
 
 This is the result when running the code now : 
 
-![image-20211021141448875](BlazorCustomRadioBtn.assets/image-20211021141448875.png)
+![image-20211021141448875](https://user-images.githubusercontent.com/20985071/138357574-20799a77-441c-4df5-9281-6ccd16d16583.png)
 
 On the right we can see the elements that Blazor created!
 
@@ -235,6 +236,7 @@ The interesting part is the `<label>` element with the `@value` class.  `@value`
 
 Notice the class names for the `<label for=".../>` element: 
 
-![image-20211021142110434](BlazorCustomRadioBtn.assets/image-20211021142110434.png)
+![image-20211021142110434](https://user-images.githubusercontent.com/20985071/138357661-86eddc32-7206-4c85-9209-a7b346a845d9.png)
 
 I really enjoyed this challenge and would love to hear possible improvements or feedback from you!
+
