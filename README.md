@@ -8,7 +8,7 @@ Lets start at the end.  This gif shows customised animated radio buttons that ar
 
 The end result pure **c#** + pure **razor**+ pure **css** = pure ***awesomeness***.
 
-![demo](https://user-images.githubusercontent.com/20985071/138357461-eca7d8e7-af1b-455f-9357-a273b36a3956.gif)
+![demo](https://user-images.githubusercontent.com/20985071/138364179-6cb0511b-e198-49ed-ad1c-37878fbf9ea3.gif)
 
 ## Implementation
 
@@ -234,9 +234,13 @@ The interesting part is the `<label>` element with the `@value` class.  `@value`
 
 #### Result
 
-Notice the class names for the `<label for=".../>` element: 
+Notice the class names for the `<label for=".../>` element, on the inspection page on the right: 
+![image-20211022090505806](https://user-images.githubusercontent.com/20985071/138364758-12830d72-adad-4d6a-bc12-37c4ef431c34.png)
 
-![image-20211021142110434](https://user-images.githubusercontent.com/20985071/138357661-86eddc32-7206-4c85-9209-a7b346a845d9.png)
+Clicking on the **Submit** button will display the model values.  Have a look at the console window and view the values in the model, when the changes are submitted: 
+
+![detailDemo](https://user-images.githubusercontent.com/20985071/138364693-bc380b08-5518-4c45-b0aa-b79cee860eb2.gif)
+
 
 I really enjoyed this challenge and would love to hear possible improvements or feedback from you!
 
