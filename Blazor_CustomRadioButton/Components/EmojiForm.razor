@@ -1,0 +1,28 @@
+@using Blazor_CustomRadioButton.Model
+@using Microsoft.AspNetCore.Components
+
+<h3>Emoji selection</h3>
+<EditForm Model="_emoji">
+    <InputRadioGroup @bind-Value="_emoji.EmojiOptions" >
+        @foreach (Enum value in Enum.GetValues(typeof(Emoji.EmojiEnum)))
+        {
+            <label>
+                <InputRadio class="selector" Value=@value />
+                <label for="@value" class="@value options" />
+                <span class="ml-2 mr-2 option-name">@value.GetDisplayName()</span>
+            </label>
+        }
+    </InputRadioGroup>
+    <div>
+        <button type="submit" class="btn mt-3 main-bg-color" @onclick="OnSubmit">ConsoleLog result</button>
+    </div>
+</EditForm>
+
+@code {
+   private Emoji _emoji = new Emoji();
+
+    private void OnSubmit()
+    {
+        Console.WriteLine($"Model EmojiOptions: {_emoji.EmojiOptions.ToString()}");
+    }
+}
